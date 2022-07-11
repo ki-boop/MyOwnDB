@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+<top>
+    <MenuBar prefHeight="44.0" prefWidth="841.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="File">
+                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open File" />
+                  <MenuItem mnemonicParsing="false" onAction="#openFolder" text="Open Folder" />
+                  <MenuItem mnemonicParsing="false" onAction="#RunCode" text="Run" />
+                  <MenuItem mnemonicParsing="false" onAction="#SaveCode" text="Save" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="OK" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</top>
+<right>
+    <TextArea fx:id="codeBlock" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="449.0" prefWidth="591.0" />
+</right>
+<bottom>
+    <Label fx:id="welcomeText" alignment="CENTER" prefHeight="82.0" prefWidth="838.0" text="Welcome to MyDB" textFill="RED" BorderPane.alignment="CENTER" />
+</bottom>
+   <center>
+    <TreeView fx:id="TheTree" onMousePressed="#click" prefHeight="449.0" prefWidth="257.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
